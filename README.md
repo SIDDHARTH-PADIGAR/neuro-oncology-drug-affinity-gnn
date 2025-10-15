@@ -1,1 +1,13 @@
-# neuro-oncology-drug-affinity-gnn
+This project is a comprehensive implementation of a dual graph convolutional neural network (GCN) framework for predicting drug-target binding affinities in the context of brain cancer therapeutics. The approach leverages recent advances in deep learning on graph-structured data, enabling the integration of detailed chemical and biological information for more accurate and biologically meaningful affinity predictions.
+
+Drugs are represented as molecular graphs, constructed from canonical SMILES strings, where nodes encode atom-level features such as atomic number, valence, and aromaticity, and edges represent different chemical bond types. Protein targets are modeled as residue-level graphs, with each node corresponding to an amino acid encoded by a one-hot vector, and edges reflecting peptide bond connectivity, thus preserving the primary sequence.
+
+The core model consists of two parallel GCN encoders for drugs and proteins, each with multiple layers, ReLU activations, dropout, and global pooling. The resulting embeddings are concatenated and passed through fully connected regression layers, outputting predicted binding affinities. Hyperparameters—including number of GCN layers, hidden dimensions, learning rate, and dropout probabilities—are fully tunable and were optimized through grid search and robust cross-validation protocols.
+
+Rigorous data curation processes were undertaken to ensure high-quality input: duplicate chemicals and proteins were removed, incomplete or ambiguous sequences filtered out, and standardized formats were enforced. Evaluation is carried out on stratified train/validation/test splits, with no data leakage, using metrics such as RMSE, R², and Pearson and Spearman correlation coefficients.
+
+The model demonstrates strong predictive performance on curated benchmarks, with particular validation against FDA-approved brain cancer drugs (e.g., Temozolomide, Bevacizumab, Lomustine), matching known therapeutic properties and highlighting its real-world applicability for neuro-oncology drug discovery and repurposing.
+
+Key strengths of this work include the modular, extensible architecture (enabling future integration of 3D structural data or omics descriptors), thorough statistical analyses (including subgroup error investigation), and its full-scale reproducibility with well-organized code and data handling. Limitations and future directions—such as the need for interpretability tools, expansion to larger and more diverse datasets, and experimental validation—are acknowledged and discussed.
+
+This repository aims to accelerate AI-powered drug discovery, providing the scientific community with a reliable, open-source resource for predictive modeling in neuroscience and precision oncology.
