@@ -17,7 +17,7 @@ This project develops a novel dual graph convolutional neural network (GCN) fram
 
 The following diagram illustrates the end-to-end workflow of the drug-target interaction (DTI) prediction pipeline used in this project.
 
-![Workflow Diagram](BC_DTI_WORKFLOW.drawio.jpg)
+<img width="401" height="1051" alt="BC_DTI_WORKFLOW drawio" src="https://github.com/user-attachments/assets/15e27bc1-441f-4170-b661-95d3cfdfcb02" />
 
 ### Description
 
