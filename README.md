@@ -4,6 +4,11 @@
 
 This project develops a novel dual graph convolutional neural network (GCN) framework to predict drug-target binding affinities for brain cancer therapeutics. The framework leverages graph representations of both drug molecules and target proteins to capture complex molecular interactions, accelerating drug discovery in neuro-oncology.
 
+This repository contains the final production implementation.  
+Research and development was carried out in a separate repository:  
+[MolecularBridge R&D Repo](https://github.com/SIDDHARTH-PADIGAR/MolecularBridge)
+
+
 ## Features
 
 - Implements advanced molecular graph learning using PyTorch Geometric and RDKit for drug and protein encoding.
